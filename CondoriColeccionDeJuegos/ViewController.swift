@@ -26,6 +26,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
+        
+
     }
     override func viewWillAppear(_ animated: Bool) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -36,6 +39,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
            
        }
     }
+    //
+    
+    //
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             let juego = juegos[indexPath.row]
             performSegue(withIdentifier: "juegoSegue", sender: juego)
@@ -44,5 +50,22 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         let siguienteVC = segue.destination as! JuegosViewController
         siguienteVC.juego = sender as? Juego
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let juego = juegos[indexPath.row]
+            context.delete(juego)
+            
+            do {
+                try context.save()
+                juegos.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } catch {
+                print("Error deleting game: \(error)")
+            }
+        }
+    }
+    //
+    
 }
 
