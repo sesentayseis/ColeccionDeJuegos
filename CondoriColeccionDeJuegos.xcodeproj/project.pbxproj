@@ -14,6 +14,7 @@
 		A81EA0BF2A153E4400545CF7 /* CondoriColeccionDeJuegos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A81EA0BD2A153E4400545CF7 /* CondoriColeccionDeJuegos.xcdatamodeld */; };
 		A81EA0C12A153E4500545CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A81EA0C02A153E4500545CF7 /* Assets.xcassets */; };
 		A81EA0C42A153E4500545CF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81EA0C22A153E4500545CF7 /* LaunchScreen.storyboard */; };
+		A81EA0CC2A15497000545CF7 /* JuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81EA0CB2A15497000545CF7 /* JuegosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A81EA0C02A153E4500545CF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A81EA0C32A153E4500545CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A81EA0C52A153E4500545CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A81EA0CB2A15497000545CF7 /* JuegosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				A81EA0C22A153E4500545CF7 /* LaunchScreen.storyboard */,
 				A81EA0C52A153E4500545CF7 /* Info.plist */,
 				A81EA0BD2A153E4400545CF7 /* CondoriColeccionDeJuegos.xcdatamodeld */,
+				A81EA0CB2A15497000545CF7 /* JuegosViewController.swift */,
 			);
 			path = CondoriColeccionDeJuegos;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A81EA0CC2A15497000545CF7 /* JuegosViewController.swift in Sources */,
 				A81EA0BF2A153E4400545CF7 /* CondoriColeccionDeJuegos.xcdatamodeld in Sources */,
 				A81EA0B92A153E4400545CF7 /* ViewController.swift in Sources */,
 				A81EA0B52A153E4400545CF7 /* AppDelegate.swift in Sources */,
