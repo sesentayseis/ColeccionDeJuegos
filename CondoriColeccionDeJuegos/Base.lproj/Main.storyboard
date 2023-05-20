@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dME-zF-00w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dME-zF-00w">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Sb0-5A-SyL">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -54,27 +55,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="03j-t1-PFd">
-                                <rect key="frame" x="67" y="120" width="280" height="150"/>
+                                <rect key="frame" x="67" y="124" width="280" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="NFJ-NZ-QZt"/>
                                     <constraint firstAttribute="width" constant="280" id="mvQ-Yp-vx0"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Titulo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-eC-1ok">
-                                <rect key="frame" x="67" y="290" width="280" height="34"/>
+                                <rect key="frame" x="67" y="294" width="280" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kM-MT-YFG">
-                                <rect key="frame" x="169.5" y="344" width="75.5" height="31"/>
+                                <rect key="frame" x="165" y="564" width="84.5" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Agregar"/>
                                 <connections>
                                     <action selector="agregarTapped:" destination="jbQ-8Z-mcW" eventType="touchUpInside" id="zP9-4k-Fa8"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqP-6B-ggH">
+                                <rect key="frame" x="67" y="338" width="280" height="216"/>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNT-Xq-pgp">
-                                <rect key="frame" x="169" y="390" width="76" height="31"/>
+                                <rect key="frame" x="165" y="618.5" width="84" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Eliminar"/>
                                 <connections>
@@ -85,14 +89,19 @@
                         <viewLayoutGuide key="safeArea" id="s4A-6O-EQa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8kM-MT-YFG" firstAttribute="top" secondItem="lqP-6B-ggH" secondAttribute="bottom" constant="10" id="5Pp-mc-SvG"/>
                             <constraint firstItem="UNT-Xq-pgp" firstAttribute="centerX" secondItem="ReC-vw-ymW" secondAttribute="centerX" id="C0j-a9-Gon"/>
+                            <constraint firstItem="8kM-MT-YFG" firstAttribute="centerX" secondItem="ReC-vw-ymW" secondAttribute="centerX" id="C4Y-GE-Vgf"/>
                             <constraint firstItem="03j-t1-PFd" firstAttribute="top" secondItem="s4A-6O-EQa" secondAttribute="top" constant="32" id="D7P-6G-3Iz"/>
                             <constraint firstItem="oI7-eC-1ok" firstAttribute="top" secondItem="03j-t1-PFd" secondAttribute="bottom" constant="20" id="FPz-8V-YeR"/>
                             <constraint firstItem="oI7-eC-1ok" firstAttribute="centerX" secondItem="ReC-vw-ymW" secondAttribute="centerX" id="NPe-ay-UWo"/>
-                            <constraint firstItem="UNT-Xq-pgp" firstAttribute="top" secondItem="8kM-MT-YFG" secondAttribute="bottom" constant="15" id="OwK-MB-JbB"/>
                             <constraint firstItem="oI7-eC-1ok" firstAttribute="width" secondItem="03j-t1-PFd" secondAttribute="width" id="X3m-J4-Riw"/>
-                            <constraint firstItem="8kM-MT-YFG" firstAttribute="top" secondItem="oI7-eC-1ok" secondAttribute="bottom" constant="20" id="cQW-3k-mf3"/>
+                            <constraint firstItem="UNT-Xq-pgp" firstAttribute="centerX" secondItem="ReC-vw-ymW" secondAttribute="centerX" id="bPP-bT-6B6"/>
+                            <constraint firstItem="UNT-Xq-pgp" firstAttribute="top" secondItem="8kM-MT-YFG" secondAttribute="bottom" constant="20" id="hvj-EQ-KrS"/>
+                            <constraint firstItem="lqP-6B-ggH" firstAttribute="top" secondItem="oI7-eC-1ok" secondAttribute="bottom" constant="10" id="izQ-on-VIY"/>
+                            <constraint firstItem="lqP-6B-ggH" firstAttribute="width" secondItem="oI7-eC-1ok" secondAttribute="width" id="mDh-uw-vw5"/>
                             <constraint firstItem="03j-t1-PFd" firstAttribute="centerX" secondItem="ReC-vw-ymW" secondAttribute="centerX" id="vcx-md-3Jy"/>
+                            <constraint firstItem="lqP-6B-ggH" firstAttribute="centerX" secondItem="ReC-vw-ymW" secondAttribute="centerX" id="whb-Rm-o2D"/>
                             <constraint firstItem="8kM-MT-YFG" firstAttribute="centerX" secondItem="ReC-vw-ymW" secondAttribute="centerX" id="yxI-1n-2WX"/>
                         </constraints>
                     </view>
@@ -113,13 +122,14 @@
                     <connections>
                         <outlet property="JuegoImageView" destination="03j-t1-PFd" id="A9N-Iq-fNB"/>
                         <outlet property="agregarActualizarBoton" destination="8kM-MT-YFG" id="jv4-ad-4uc"/>
+                        <outlet property="categoryPickerView" destination="lqP-6B-ggH" id="4HE-oU-wYS"/>
                         <outlet property="eliminarBoton" destination="UNT-Xq-pgp" id="FSu-x7-wsB"/>
                         <outlet property="tituloTextField" destination="oI7-eC-1ok" id="l16-Jk-9Mp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4M-AX-pt1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="31"/>
+            <point key="canvasLocation" x="1939.1304347826087" y="30.803571428571427"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cnf-cV-M6n">
@@ -127,7 +137,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dME-zF-00w" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qsM-b3-puf">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

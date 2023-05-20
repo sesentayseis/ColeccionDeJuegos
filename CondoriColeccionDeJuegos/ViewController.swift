@@ -103,7 +103,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
             return true
         }
-        
+    // MARK: - editingStyle el botón de eliminar 
+
         func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == .delete {
                 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
